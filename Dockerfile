@@ -1,13 +1,12 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
-ENV TZ=Asia/Shanghai LANG=C.UTF-8 DEBIAN_FRONTEND=noninteractive
+ENV TZ=America/New_York LANG=en_US.UTF-8 DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update ; apt-get install -y --no-install-recommends ca-certificates curl wget apt-transport-https tzdata \
     dumb-init iproute2 iputils-ping iputils-arping telnet less vim-tiny unzip gosu fonts-dejavu-core tcpdump \
     net-tools socat netcat traceroute jq mtr-tiny dnsutils psmisc \
     cron logrotate runit rsyslog-kafka gosu bsdiff libtcnative-1 libjemalloc-dev nginx php-fpm ; \
     mkdir -p /run/php /var/www/html/wiki.d ;\
-    sed -i 's@ .*.ubuntu.com@ https://mirrors.ustc.edu.cn@g' /etc/apt/sources.list ;\
     sed -i '/session    required     pam_loginuid.so/c\#session    required   pam_loginuid.so' /etc/pam.d/cron ;\
     sed -i 's/^module(load="imklog"/#module(load="imklog"/g' /etc/rsyslog.conf ;\
     mkdir -p /etc/service/cron /etc/service/syslog /etc/service/php /etc/service/nginx ;\
