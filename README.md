@@ -8,7 +8,7 @@ Create a directory for the project:
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 
-# run
+# run in wsl2/ubuntu with sudo priviledge
 ```
 mkdir -p wiki.d
 chown 33:33 -R wiki.d
