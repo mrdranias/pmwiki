@@ -10,4 +10,4 @@ docker-compose -d
 ```
 
 # browser
-open http://x.x.x.x:33380
+open http://x.x.x.x:33080
