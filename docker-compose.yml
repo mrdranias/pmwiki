@@ -3,9 +3,9 @@ version: '2.2'
 services:
   pmwiki:
     container_name: pmwiki
-    image: taomaree/pmwiwi:latest
+    image: mrdranias/pmwiwi:latest
     volumes:
       - "./wiki.d:/var/www/html/wiki.d"
     ports:
-      - "33380:80"  # expose 33380
+      - "33080:80"  # expose 33080
 
