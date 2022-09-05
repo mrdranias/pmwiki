@@ -16,4 +16,4 @@ docker compose up -d
 ```
 
 # browser
-open http://x.x.x.x:33080
+open http://localhost:33080
